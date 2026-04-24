@@ -1,5 +1,5 @@
 {% set name = "zodiax" %}
-{% set version = "0.4.1" %}
+{% set version = "0.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/zodiax-{{ version }}.tar.gz
-  sha256: db77586c63d520e4e591edfbf465b9939865c50ed38311ecfb263e707d98a8f6
+  sha256: 1d630483a6189c1cb65b90285537259f2ce4cf206407d0f7aece316e6a97ec22
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
